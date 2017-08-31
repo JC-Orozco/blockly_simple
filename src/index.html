@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Blockly Demo: Fixed Blockly</title>
+  <script src="../node_modules/blockly/blockly_compressed.js"></script>
+  <script src="../node_modules/blockly/blocks_compressed.js"></script>
+  <script src="../node_modules/blockly/msg/js/en.js"></script>
+  <style>
+    body {
+      background-color: #fff;
+      font-family: sans-serif;
+    }
+    h1 {
+      font-weight: normal;
+      font-size: 140%;
+    }
+  </style>
+</head>
+<body>
+  <div id="blocklyDiv" style="height: 700px; width: 600px;"></div>
+
+  <xml id="toolbox" style="display: none">
+    <block type="controls_if"></block>
+    <block type="logic_compare"></block>
+    <block type="controls_repeat_ext"></block>
+    <block type="math_number"></block>
+    <block type="math_arithmetic"></block>
+    <block type="text"></block>
+    <block type="text_print"></block>
+  </xml>
+
+<!--
+  <xml id="xml1" style="display: none">
+    <block type="controls_if"></block>
+  </xml>
+-->
+
+<!--
+  <xml id="xml1" xmlns="http://www.w3.org/1999/xhtml" style="display: none"><block type="math_number" line_number="1"><field name="NUM">1</field></block><block type="math_number" line_number="2"><field name="NUM">2</field></block><block type="math_number" line_number="3"><field name="NUM">3</field></block><block type="math_number" line_number="4"><field name="NUM">4</field></block><block type="math_number" line_number="5"><field name="NUM">5</field></block><block type="math_number" line_number="6"><field name="NUM">6</field></block><block type="math_number" line_number="7"><field name="NUM">7</field></block><block type="math_number" line_number="8"><field name="NUM">8</field></block><block type="math_number" line_number="9"><field name="NUM">9</field></block><block type="math_number" line_number="10"><field name="NUM">10</field></block><block type="math_number" line_number="11"><field name="NUM">11</field></block><block type="math_number" line_number="12"><field name="NUM">12</field></block></xml>
+-->
+
+<!--
+  <xml id="xml1" xmlns="http://www.w3.org/1999/xhtml" style="display: none">
+    <block type="math_number">
+      <field name="NUM">1</field>
+    </block>
+    <block type="math_number">
+      <field name="NUM">2</field>
+    </block>
+    <block type="math_number">
+      <field name="NUM">3</field>
+    </block>
+    <block type="math_number">
+      <field name="NUM">4</field>
+    </block>
+    <block type="math_number">
+      <field name="NUM">5</field>
+    </block>
+    <block type="math_number">
+      <field name="NUM">6</field>
+    </block>
+    <block type="math_number">
+      <field name="NUM">7</field>
+    </block>
+    <block type="math_number">
+      <field name="NUM">8</field>
+    </block>
+    <block type="math_number">
+      <field name="NUM">9</field>
+    </block>
+    <block type="math_number">
+      <field name="NUM">10</field>
+    </block>
+    <block type="math_number">
+      <field name="NUM">11</field>
+    </block>
+    <block type="math_number">
+      <field name="NUM">12</field>
+    </block>
+  </xml>
+-->
+
+<!-- Este si funciona -->
+  <xml id="xml1" xmlns="http://www.w3.org/1999/xhtml" style="display: none">
+    <block type="math_number" x="0" y="0">
+      <field name="NUM">1</field>
+    </block>
+    <block type="math_number" x="0" y="1">
+      <field name="NUM">2</field>
+    </block>
+    <block type="math_number" x="0" y="2">
+      <field name="NUM">3</field>
+    </block>
+    <block type="math_number" x="0" y="3">
+      <field name="NUM">4</field>
+    </block>
+    <block type="math_number" x="0" y="4">
+      <field name="NUM">5</field>
+    </block>
+    <block type="math_number" x="0" y="5">
+      <field name="NUM">6</field>
+    </block>
+    <block type="math_number" x="0" y="6">
+      <field name="NUM">7</field>
+    </block>
+    <block type="math_number" x="0" y="7">
+      <field name="NUM">8</field>
+    </block>
+    <block type="math_number" x="0" y="8">
+      <field name="NUM">9</field>
+    </block>
+    <block type="math_number" x="0" y="9">
+      <field name="NUM">10</field>
+    </block>
+    <block type="math_number" x="0" y="10">
+      <field name="NUM">11</field>
+    </block>
+    <block type="math_number" x="0" y="11">
+      <field name="NUM">12</field>
+    </block>
+    <block type="math_number" x="0" y="12">
+      <field name="NUM">13</field>
+    </block>
+  </xml>
+
+
+<!-- Este si funciona en Chrome también. Todos funcionan en Firefox -->
+<!--
+  <xml id="xml1" xmlns="http://www.w3.org/1999/xhtml" style="display: none">
+    <block type="math_number" id="-+;QqWYiloS#?Fsm9;q]" x="0" y="0">
+      <field name="NUM">1</field>
+    </block>
+    <block type="math_number" id="BH)3L[O%J#_sQMc@$QyU" x="0" y="46">
+      <field name="NUM">2</field>
+    </block>
+    <block type="math_number" id="VUAa0[a|}h:#HbqQ)7{j" x="0" y="92">
+      <field name="NUM">3</field>
+    </block>
+    <block type="math_number" id="e+VD[0.H+8P,:L7Qa}$y" x="0" y="138">
+      <field name="NUM">4</field>
+    </block>
+    <block type="math_number" id="M!~IiPl^m#Qys=.w~Tk-" x="0" y="184">
+      <field name="NUM">5</field>
+    </block>
+    <block type="math_number" id="/JyrYT=~[1J.|*x]V;V9" x="0" y="230">
+      <field name="NUM">6</field>
+    </block>
+    <block type="math_number" id="E`)DEfPc40E*5T`WDj.~" x="0" y="276">
+      <field name="NUM">7</field>
+    </block>
+    <block type="math_number" id="!bx:BCbacx=)o??3l~g3" x="0" y="322">
+      <field name="NUM">8</field>
+    </block>
+    <block type="math_number" id="Wc{)a;c7e$V|m,9T6d9P" x="0" y="368">
+      <field name="NUM">9</field>
+    </block>
+    <block type="math_number" id="@3Y`r.uCnIi#L$SwWonI" x="0" y="414">
+      <field name="NUM">10</field>
+    </block>
+    <block type="math_number" id="b=_{fsn_^25BTv.dTeU7" x="0" y="460">
+      <field name="NUM">11</field>
+    </block>
+    <block type="math_number" id="AvGuH...89.4#+Y7;.$j" x="0" y="506">
+      <field name="NUM">12</field>
+    </block>
+    <block type="math_number" id="u66W6hQ#SR?01rUr+enI" x="0" y="552">
+      <field name="NUM">13</field>
+    </block>
+  </xml>
+-->
+
+  <script>
+    var workspace = Blockly.inject('blocklyDiv',
+        {media: '../node_modules/blockly/media/',
+         toolbox: document.getElementById('toolbox')});
+
+    var xml1 = document.getElementById('xml1');
+    
+    workspace.clear();
+    Blockly.Xml.domToWorkspace(workspace, xml1);
+    workspace.cleanUp();
+  </script>
+
+</body>
+</html>
